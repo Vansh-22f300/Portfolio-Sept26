@@ -1465,3 +1465,82 @@ figure { margin: 0; }
   .rv { opacity: 1 !important; transform: none !important; }
   .eyebrow::after, .featured__head::after { transform: scaleX(1) !important; }
 }
+
+/* ------------------------------------------------------------ 18 not found */
+
+/* Standalone 404. Sticky-footer column so the page fills the viewport and the
+   footer sits at the bottom regardless of content height. No JS on this page:
+   every recovery path is a plain anchor in the body. */
+.nf-body { display: flex; flex-direction: column; min-height: 100vh; min-height: 100dvh; }
+.nf-body .site-footer { margin-top: auto; }
+
+.nf {
+  flex: 1;
+  display: flex; align-items: center;
+  padding-block: clamp(3rem, 10vw, 7rem);
+}
+.nf__in { max-width: 44rem; }
+
+.nf__in .badge { margin-bottom: var(--s5); }
+
+/* The oversized numeral is the focal point; the sentence beside it carries the
+   accessible heading text (the numeral is aria-hidden in the markup). */
+.nf__title { margin-bottom: var(--s5); }
+.nf__code {
+  display: block;
+  font-size: clamp(5rem, 22vw, 11rem);
+  font-weight: 560; letter-spacing: -0.05em; line-height: 0.9;
+  color: var(--ink);
+}
+.nf__head {
+  display: block;
+  margin-top: var(--s3);
+  font-size: clamp(1.5rem, 4.2vw, 2.5rem);
+  letter-spacing: -0.03em; line-height: 1.1;
+}
+
+.nf__lede {
+  max-width: 48ch;
+  font-size: clamp(1rem, 1.6vw, 1.125rem);
+  line-height: 1.6; color: var(--ink-2);
+  margin-bottom: var(--s6);
+}
+
+/* Editorial path map — a restrained detail, deliberately not a debug console:
+   no box, no background, just monospace segments joined by thin arrows. */
+.nf__route {
+  display: flex; flex-wrap: wrap; align-items: center; gap: var(--s3);
+  margin-bottom: var(--s7);
+  color: var(--ink-3);
+}
+.nf__seg { padding: 0.25rem 0.5rem; border: 1px solid var(--line); border-radius: var(--radius); }
+.nf__seg--req  { color: var(--ink-2); }
+.nf__seg--err  { color: var(--accent-2); border-color: var(--accent-line); background: var(--accent-wash); }
+.nf__seg--home { color: var(--ink); border-color: var(--ink); }
+.nf__arrow { color: var(--ink-4); }
+
+.nf__actions {
+  display: flex; flex-wrap: wrap; gap: var(--s4);
+  margin-bottom: var(--s6);
+}
+
+.nf__aux { font-size: 0.8125rem; color: var(--ink-3); }
+.nf__aux .tlink { color: var(--ink-2); }
+
+/* One subtle, one-shot entrance on the decorative numeral only. All real
+   content (heading, lede, actions) is visible by default and never depends on
+   the animation running — so the page is fully usable with motion, without
+   motion, and without JavaScript. The numeral is aria-hidden, so even in the
+   worst case it degrades to simply appearing statically. */
+@media (prefers-reduced-motion: no-preference) {
+  .nf__code { animation: nf-rise 620ms var(--ease) both; }
+}
+@keyframes nf-rise {
+  from { opacity: 0; transform: translateY(0.15em); }
+  to   { opacity: 1; transform: none; }
+}
+
+@media (max-width: 560px) {
+  .nf__actions { flex-direction: column; align-items: stretch; }
+  .nf__actions .btn { justify-content: center; }
+}

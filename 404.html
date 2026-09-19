@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>404 — Page Not Found | Vansh Mittal</title>
+<meta name="description" content="The page you were looking for doesn't exist. Head back to the portfolio home, browse selected work, or get in touch.">
+
+<!-- A 404 is not real content: keep it out of the index, but let crawlers
+     follow the recovery links back into the site. No canonical (it must not
+     masquerade as the homepage) and no structured data. -->
+<meta name="robots" content="noindex, follow">
+
+<meta name="theme-color" content="#f1f2ed" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#141817" media="(prefers-color-scheme: dark)">
+
+<!-- Root-relative paths: GitHub Pages / Vercel may serve this file for a
+     missing URL at any depth (e.g. /projects/foo/bar), so relative paths
+     would resolve against that phantom directory. This site deploys at the
+     domain root, so a leading slash is correct. -->
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/styles.css">
+</head>
+
+<body class="nf-body">
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header" data-header data-stuck="false">
+  <div class="wrap site-header__in">
+    <a class="brand" href="/" aria-label="Vansh Mittal — home">
+      <span class="brand__mark" aria-hidden="true">VM</span>
+      <span>
+        <span class="brand__name">Vansh Mittal</span>
+        <span class="brand__role">Associate Software Engineer</span>
+      </span>
+    </a>
+  </div>
+</header>
+
+<main id="main" class="nf wrap">
+  <div class="nf__in">
+    <span class="badge badge--offline">
+      <span class="badge__dot" aria-hidden="true"></span> HTTP 404
+    </span>
+
+    <h1 class="nf__title">
+      <span class="nf__code" aria-hidden="true">404</span>
+      <span class="nf__head">This page can't be <em class="ser">found</em>.</span>
+    </h1>
+
+    <p class="nf__lede">
+      The route you followed doesn't exist here — it may have been moved, renamed,
+      or never existed. Everything else is where you left it.
+    </p>
+
+    <!-- Decorative route map, not a real console. Hidden from assistive tech
+         because the heading and lede already carry the meaning. -->
+    <p class="nf__route mono" aria-hidden="true">
+      <span class="nf__seg nf__seg--req">/requested-route</span>
+      <span class="nf__arrow">→</span>
+      <span class="nf__seg nf__seg--err">404</span>
+      <span class="nf__arrow">→</span>
+      <span class="nf__seg nf__seg--home">/</span>
+    </p>
+
+    <div class="nf__actions">
+      <a class="btn btn--primary" href="/">
+        Back to home <span class="btn__ico" aria-hidden="true">→</span>
+      </a>
+      <a class="btn btn--ghost" href="/#work">
+        Selected work <span class="btn__ico" aria-hidden="true">↓</span>
+      </a>
+      <a class="btn btn--ghost" href="/#contact">
+        Contact <span class="btn__ico" aria-hidden="true">→</span>
+      </a>
+    </div>
+
+    <p class="nf__aux">
+      Or read the source on
+      <a class="tlink" href="https://github.com/Vansh-22f300" target="_blank" rel="noopener noreferrer">
+        GitHub <span class="tlink__ico" aria-hidden="true">↗</span>
+      </a>
+    </p>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap site-footer__in">
+    <span>&copy; 2026 Vansh Mittal</span>
+    <span>Hand-written HTML, CSS and JavaScript. No framework, no build step.</span>
+    <a href="/">Back to home ↑</a>
+  </div>
+</footer>
+</body>
+</html>
