@@ -101,7 +101,7 @@
 
     <div class="rv">
       <div class="cs-hero__head">
-        <span class="badge badge--source"><span class="badge__dot" aria-hidden="true"></span> Source available</span>
+        <span class="badge badge--live"><span class="badge__dot" aria-hidden="true"></span> Live</span>
         <span class="mono" style="color:var(--ink-4)">2025 · MAD-2 coursework</span>
       </div>
 
@@ -136,7 +136,10 @@
       </div>
 
       <div class="scan__actions">
-        <a class="btn btn--primary" href="https://github.com/Vansh-22f300/Quiz-v2-MAD2_PROJECT" target="_blank" rel="noopener noreferrer">
+        <a class="btn btn--primary" href="https://quiz-app-v2-py9b.onrender.com/" target="_blank" rel="noopener noreferrer">
+          Live demo <span class="btn__ico" aria-hidden="true">↗</span>
+        </a>
+        <a class="btn btn--ghost" href="https://github.com/Vansh-22f300/Quiz-v2-MAD2_PROJECT" target="_blank" rel="noopener noreferrer">
           Read the source <span class="btn__ico" aria-hidden="true">↗</span>
         </a>
         <a class="tlink" href="#limitations">
@@ -442,7 +445,7 @@
           <li>Production configuration targets PostgreSQL and Redis with a managed-host URL scheme rewrite.</li>
           <li>A build script compiles the Vue frontend and copies the bundle into the backend static directory.</li>
           <li>A WSGI entry point exposes the app for a production server.</li>
-          <li>Not currently deployed to a public URL — the repository is the evidence for this project.</li>
+          <li>Deployed to a public URL on Render, backed by managed PostgreSQL. On the free tier the instance sleeps when idle, so the first request after a pause takes a few seconds to wake.</li>
         </ul>
       </div>
     </div>
