@@ -22,7 +22,7 @@ export const PROFILE = {
 
   // Google Drive share link. Opens the Drive preview (with a download button)
   // in a new tab; the hero and contact CTAs point here.
-  resume: 'https://drive.google.com/file/d/1r2PIKosNdrMQNP3QMK_8l7EuiSmiqQ1d/view?usp=sharing',
+  resume: 'https://drive.google.com/file/d/1eb7o-P4LEzap9WGHSM9mQ4o4vtM0w4Ox/view?usp=sharing',
 
   positioning:
     'I build Full Stack web applications — Vue and React on the front, Flask REST APIs, ' +
