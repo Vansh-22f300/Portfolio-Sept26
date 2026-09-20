@@ -20,9 +20,9 @@ export const PROFILE = {
 
   linkedin: 'https://www.linkedin.com/in/vansh-mittal-vm/',
 
-  // Not supplied yet. Left empty deliberately: the UI hides the control rather
-  // than rendering a dead link. Fill it in and the CTA appears.
-  resume: '',
+  // Root-relative path to the hosted PDF. Served from /assets so the same URL
+  // works from any page; the hero and contact CTAs link to it directly.
+  resume: 'assets/Vansh_Mittal_Resume.pdf',
 
   positioning:
     'I build Full Stack web applications — Vue and React on the front, Flask REST APIs, ' +
