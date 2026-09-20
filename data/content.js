@@ -20,9 +20,9 @@ export const PROFILE = {
 
   linkedin: 'https://www.linkedin.com/in/vansh-mittal-vm/',
 
-  // Root-relative path to the hosted PDF. Served from /assets so the same URL
-  // works from any page; the hero and contact CTAs link to it directly.
-  resume: 'assets/Vansh_Mittal_Resume.pdf',
+  // Google Drive share link. Opens the Drive preview (with a download button)
+  // in a new tab; the hero and contact CTAs point here.
+  resume: 'https://drive.google.com/file/d/1r2PIKosNdrMQNP3QMK_8l7EuiSmiqQ1d/view?usp=sharing',
 
   positioning:
     'I build Full Stack web applications — Vue and React on the front, Flask REST APIs, ' +
