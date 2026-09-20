@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://vansh-mittal-portfolio.vercel.app/sitemap.xml
+Sitemap: https://vansh-mittal.vercel.app/sitemap.xml
