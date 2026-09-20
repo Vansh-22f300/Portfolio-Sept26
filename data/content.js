@@ -397,7 +397,7 @@ export const PROJECTS = [
       'An exam platform with a four-level subject hierarchy, server-side scoring and an answer key the client never receives.',
     role: 'Sole developer — backend, frontend and schema',
     context: 'Modern Application Development II coursework',
-    status: { label: 'Source available', tone: 'source' },
+    status: { label: 'Live', tone: 'live' },
     year: '2025',
     stack: ['Vue 3', 'Flask', 'PostgreSQL', 'Celery', 'Redis', 'bcrypt', 'Chart.js'],
     metrics: [
@@ -413,8 +413,8 @@ export const PROJECTS = [
     ],
     links: {
       github: 'https://github.com/Vansh-22f300/Quiz-v2-MAD2_PROJECT',
-      demo: null,
-      demoNote: 'No public deployment — production config targets PostgreSQL + Redis',
+      demo: 'https://quiz-app-v2-py9b.onrender.com/',
+      demoNote: 'Deployed on Render (free tier) with managed PostgreSQL; the instance sleeps when idle',
     },
 
     overview:
@@ -569,7 +569,7 @@ export const PROJECTS = [
       'Production configuration targets PostgreSQL and Redis with a managed-host URL scheme rewrite.',
       'A build script compiles the Vue frontend and copies the bundle into the backend static directory.',
       'A WSGI entry point exposes the app for a production server.',
-      'Not currently deployed to a public URL — the repository is the evidence for this project.',
+      'Deployed to a public URL on Render, backed by managed PostgreSQL. On the free tier the instance sleeps when idle, so the first request after a pause takes a few seconds to wake.',
     ],
 
     lessons: [
