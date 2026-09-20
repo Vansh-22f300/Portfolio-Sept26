@@ -1559,6 +1559,11 @@ figure { margin: 0; }
   padding-block: clamp(2rem, 6vw, 4rem);
 }
 
+/* Back link sits above the header as a return path, distinct from the résumé
+   actions below. Left-pointing arrow, so the hover nudge travels left too. */
+.rz__back { align-self: flex-start; margin-bottom: var(--s5); }
+.rz__back:hover .rz__back-ico { transform: translateX(-3px); }
+
 .rz__head {
   display: flex; flex-wrap: wrap; align-items: flex-end;
   justify-content: space-between; gap: var(--s5);
