@@ -1544,3 +1544,67 @@ figure { margin: 0; }
   .nf__actions { flex-direction: column; align-items: stretch; }
   .nf__actions .btn { justify-content: center; }
 }
+
+/* ------------------------------------------------------------ 19 résumé viewer */
+
+/* Standalone résumé page: sticky-footer column so the embedded viewer can grow
+   to fill the viewport. No JS on this page — the download and new-tab actions
+   are plain anchors, and the inline viewer degrades to a fallback link. */
+.rz-body { display: flex; flex-direction: column; min-height: 100vh; min-height: 100dvh; }
+.rz-body .site-footer { margin-top: auto; }
+
+.rz {
+  flex: 1;
+  display: flex; flex-direction: column;
+  padding-block: clamp(2rem, 6vw, 4rem);
+}
+
+/* Back link sits above the header as a return path, distinct from the résumé
+   actions below. Left-pointing arrow, so the hover nudge travels left too. */
+.rz__back { align-self: flex-start; margin-bottom: var(--s5); }
+.rz__back:hover .rz__back-ico { transform: translateX(-3px); }
+
+.rz__head {
+  display: flex; flex-wrap: wrap; align-items: flex-end;
+  justify-content: space-between; gap: var(--s5);
+  margin-bottom: var(--s6);
+}
+.rz__title {
+  margin-top: var(--s3);
+  font-size: clamp(2rem, 5vw, 3rem);
+  letter-spacing: -0.03em; line-height: 1.05;
+}
+.rz__lede {
+  max-width: 52ch;
+  margin-top: var(--s3);
+  font-size: clamp(1rem, 1.6vw, 1.125rem);
+  line-height: 1.6; color: var(--ink-2);
+}
+
+.rz__actions {
+  display: flex; flex-wrap: wrap; align-items: center; gap: var(--s4);
+}
+
+/* The viewer itself. A tall min-height so the PDF is readable without the page
+   feeling cramped; capped at the reading column width the rest of the site uses. */
+.rz__frame {
+  width: 100%;
+  min-height: 78vh;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--paper-2, #fff);
+}
+
+.rz__fallback {
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  gap: var(--s4);
+  min-height: 40vh;
+  padding: var(--s6);
+  text-align: center; color: var(--ink-2);
+}
+
+@media (max-width: 560px) {
+  .rz__actions { width: 100%; }
+  .rz__actions .btn { flex: 1; justify-content: center; }
+  .rz__frame { min-height: 70vh; }
+}
