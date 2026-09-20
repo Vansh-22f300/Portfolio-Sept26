@@ -5,7 +5,7 @@ Engineering portfolio for **Vansh Mittal**, Associate Software Engineer at Compr
 Static HTML, CSS and JavaScript. No framework, no build step, no dependencies — clone it and open
 `index.html`.
 
-**Live:** https://vansh-mittal-portfolio.vercel.app/
+**Live:** https://vansh-mittal.vercel.app/
 
 ---
 
