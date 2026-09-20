@@ -20,9 +20,9 @@ export const PROFILE = {
 
   linkedin: 'https://www.linkedin.com/in/vansh-mittal-vm/',
 
-  // Google Drive share link. Opens the Drive preview (with a download button)
-  // in a new tab; the hero and contact CTAs point here.
-  resume: 'https://drive.google.com/file/d/1eb7o-P4LEzap9WGHSM9mQ4o4vtM0w4Ox/view?usp=sharing',
+  // On-site résumé viewer (/resume/) — embeds the PDF with download and
+  // open-in-new-tab actions. The raw file lives at assets/Vansh_Mittal_Resume.pdf.
+  resume: 'resume/',
 
   positioning:
     'I build Full Stack web applications — Vue and React on the front, Flask REST APIs, ' +
